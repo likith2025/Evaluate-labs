@@ -85,4 +85,32 @@ Top headline three
 
 This scraper is for educational purposes and is intended for use on publicly accessible sites. Respect the target website's `robots.txt` and terms of service.
 
+Task-4: ## Flask REST API - User Management
+
+## 📌 Overview
+This project is a simple **REST API** built with **Flask** that allows you to manage user data using `GET`, `POST`, `PUT`, and `DELETE` operations.
+
+The API stores user data in an **in-memory dictionary** (no database required) for learning purposes.
+
+---
+
+## 🛠 Tools & Technologies
+- **Python 3.x**
+- **Flask**
+- **Postman** or **Curl** (for testing)
+
+---
+
+## 🚀 Features
+- **GET** all users
+- **GET** a specific user
+- **POST** to add a new user
+- **PUT** to update user details
+- **DELETE** to remove a user
+
+---
+
+## 📂 Project Structure
+
+
 You can copy and paste this block into your `README.md` file on GitHub. Let me know if you want to customize it further!
