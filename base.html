@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="{{ C:\Users\nagar\OneDrive\Desktop\srk\task-6\app.py}}">likith</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="{{C:\Users\nagar\OneDrive\Desktop\srk\task-6\index.html }}" class="nav-link">Home</a>
+                <a href="{{ C:\Users\nagar\OneDrive\Desktop\srk\task-6\about.html}}" class="nav-link">About</a>
+                <a href="{{ C:\Users\nagar\OneDrive\Desktop\srk\task-6\Projects.html }}" class="nav-link">Projects</a>
+                <a href="{{ C:\Users\nagar\OneDrive\Desktop\srk\task-6\Contact.html }}" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash flash-{{ category }}">
+                        {{ message }}
+                        <button onclick="this.parentElement.style.display='none'" class="flash-close">&times;</button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/likith2025?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/likith" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:likithdasari2003@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2024 John Doe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
